@@ -2,24 +2,165 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Real Rentería</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Real Rentería</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f4f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #3e3e3e;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .logo {
+      width: 60px;
+      height: 60px;
+      background-color: #ddd;
+      border-radius: 10px;
+      margin-right: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin: 0;
+      color: #b79b7b;
+    }
+
+    .descripcion {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .servicios {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .servicio {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      text-align: center;
+      padding: 10px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .servicio img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    footer {
+      background-color: #3e3e3e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    .social-links {
+      margin-top: 10px;
+    }
+
+    .social-links a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Botón flotante de WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+      font-size: 28px;
+      text-decoration: none;
+      z-index: 100;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1>Bienvenido a Real Rentería</h1>
-    <p>Tu sitio de confianza.</p>
+    <div class="logo">
+      <!-- Aquí va tu logo -->
+      <!-- <img src="logo.png" alt="Logo Café"> -->
+    </div>
+    <h1>Café Real Rentería</h1>
   </header>
 
+  <div class="descripcion">
+    <!-- Descripción del café (puedes editar esto después) -->
+    <p></p>
+  </div>
+
+  <div class="servicios">
+    <div class="servicio">
+      <img src="cafe.jpg" alt="Café">
+      <h3>Café</h3>
+    </div>
+    <div class="servicio">
+      <img src="bebidas.jpg" alt="Bebidas frías">
+      <h3>Bebidas Frías</h3>
+    </div>
+    <div class="servicio">
+      <img src="alimentos.jpg" alt="Alimentos">
+      <h3>Alimentos</h3>
+    </div>
+    <div class="servicio">
+      <img src="cocteleria.jpg" alt="Coctelería">
+      <h3>Coctelería</h3>
+    </div>
+    <div class="servicio">
+      <img src="otros.jpg" alt="Otros">
+      <h3>Otros</h3>
+    </div>
+  </div>
+
   <footer>
-    <p>Dirección: Regina 17 Col. Centro, Ciudad De Mexico</p>
-    <p>Redes sociales: <a href="">Facebook</a> | 
-      <a href="https://www.instagram.com/cafe_renteria?igsh=c2d6dTZ2d3B3NTV5">Instagram</a></p>
+    <p>Dirección: Regina 27, Col. Centro, Ciudad de México</p>
+    <p>Horario: 9:00 AM – 8:00 PM, todos los días</p>
+
+    <div class="social-links">
+      <a href="#" target="_blank">Instagram</a>
+      <!-- Puedes poner el link real en href -->
+    </div>
   </footer>
 
-  <!-- Botón flotante de WhatsApp -->
-  <a href="https://wa.me/525531493593" class="whatsapp" target="_blank">💬</a>
+  <a href="#" class="whatsapp-float" title="Enviar WhatsApp" target="_blank">📱</a>
+  <!-- Puedes poner el link real de WhatsApp en href -->
 
-  <script src="script.js"></script>
 </body>
 </html>
