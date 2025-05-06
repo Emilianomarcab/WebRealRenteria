@@ -196,20 +196,15 @@ body {
 /* Mapa */
 
 
-/*
+
 
 .mapa {
   padding: 40px 20px;
   text-align: center;
-  background-color: #f4f4f4; /* Fondo más suave 
+
 } 
 
-*/
 
-.mapa h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
 
 .mapa iframe {
   border: 2px solid #ccc; /* Añade un borde alrededor del iframe */
