@@ -29,10 +29,11 @@ body {
   overflow: hidden;
 }
 .banner-imagen {
-  height: auto;
-  width: auto;
-  object-fit: cover; /* Asegura que la imagen se ajuste bien */
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
+  height: auto; /* Mantiene la proporción de la imagen */
+  object-fit: cover; /* Hace que la imagen cubra el área del contenedor sin deformarse */
 }
+
 
 
  
@@ -103,11 +104,99 @@ body {
   background-color: #ad5e03;
 }
 
+/* Estilos para la sección Experiencia sin fondo */
+.experiencia {
+  padding: 0px 0;
+  background: #ffffff;
+}
+
+.experiencia-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.experiencia-item .imagen {
+  flex: 1;
+  padding: 10px;
+  max-width: 80%;
+}
+
+.experiencia-item .texto {
+  flex: 2;
+  padding: 10px;
+}
+
+.experiencia-item .imagen img {
+  width: 100%;
+  height: auto;
+  max-width: 400px; /* Limitar el tamaño máximo */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+
+.experiencia-item .texto h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.experiencia-item .texto p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Estilos para el diseño inverso */
+.experiencia-item.reversed {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  .experiencia-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .experiencia-item .imagen, 
+  .experiencia-item .texto {
+    flex: none;
+    margin-bottom: 20px;
+  }
+
+  .experiencia-item.reversed {
+    flex-direction: column;
+  }
+}
+
+
 /* Mapa */
+
+
+/*
+
 .mapa {
   padding: 40px 20px;
   text-align: center;
+  background-color: #f4f4f4; /* Fondo más suave 
+} 
+
+*/
+
+.mapa h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
 }
+
+.mapa iframe {
+  border: 2px solid #ccc; /* Añade un borde alrededor del iframe */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+
 .mapa h2 {
   font-size: 28px;
   margin-bottom: 20px;
