@@ -38,6 +38,18 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-image: url('img/FondoLadrillos.jpg'); /* <-- esta es la ruta */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+
 .descripcion {
   background-image: url('img/fondo-descripcion.jpg');
   background-size: cover;
