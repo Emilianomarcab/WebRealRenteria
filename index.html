@@ -36,36 +36,26 @@
       <button onclick="location.href='menu.html'">Bar</button>
     </div>
   </section>
-  <!-- Experiencia -->
-<section class="experiencia fade-in">
-  <div class="experiencia-item">
-    <div class="imagen izquierda">
-      <img src="img/Cafe2.jpg" alt="Experiencia 1" />
-    </div>
-    <div class="texto derecha">
-      <h2>¡Vive la Experiencia Real Rentería!</h2>
-      <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    </div>
+
+<!--Galeria -->
+
+
+
+
+
+<section class="galeria fade-in">
+  <div class="imagen-contenedor">
+    <button class="anterior" onclick="cambiarImagen(-1)">&#8249;</button>
+    <img id="imagen-carrusel" src="img/Cafe4.jpg" alt="Imagen destacada">
+    <button class="siguiente" onclick="cambiarImagen(1)">&#8250;</button>
   </div>
-  <div class="experiencia-item reversed">
-    <div class="imagen derecha">
-      <img src="img/Cafe1.jpg" alt="Experiencia 2" />
-    </div>
-    <div class="texto izquierda">
-      <h2>Vive la Experiencia Real Rentería!</h2>
-      <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    </div>   
-  </div>
-  <div class="experiencia-item">
-    <div class="imagen izquierda">
-      <img src="img/Cafe1.jpg" alt="Experiencia 1" />
-    </div>
-    <div class="texto derecha">
-      <h2>¡Vive la Experiencia Real Rentería!</h2>
-      <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    </div>
+  <div class="texto-fondo">
+    <p id="texto-imagen">Descripción de la imagen 1</p>
   </div>
 </section>
+
+
+  
   <!-- Galería de imágenes largas tipo D’Amico (comentado) -->
   <!--
   <section class="galeria-damico fade-in">
@@ -91,5 +81,14 @@
   <a href="https://wa.me/525531493593" class="whatsapp-float" target="_blank" rel="noopener">
     <img src="img/LogoWhatsApp.png" alt="WhatsApp" />
   </a>
+
+  <script src="carrusel.js"></script>
+
 </body>
+
+
+
+
+
+
 </html>

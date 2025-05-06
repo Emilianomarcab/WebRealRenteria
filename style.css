@@ -104,72 +104,92 @@ body {
   background-color: #ad5e03;
 }
 
-/* Estilos para la sección Experiencia sin fondo */
-.experiencia {
-  padding: 0px 0;
-  background: #ffffff;
+.galeria {
+  padding: 40px 20px;
+  text-align: center;
+ /* background-color: #f4f4f4; */
 }
 
-.experiencia-item {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 20px;
+.imagen-contenedor {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
-.experiencia-item .imagen {
-  flex: 1;
-  padding: 10px;
-  max-width: 80%;
-}
-
-.experiencia-item .texto {
-  flex: 2;
-  padding: 10px;
-}
-
-.experiencia-item .imagen img {
+.imagen-contenedor img {
   width: 100%;
+  max-width: 600px;
   height: auto;
-  max-width: 400px; /* Limitar el tamaño máximo */
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.siguiente {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.descripcion {
+  font-size: 18px;
+  margin-top: 20px;
+  color: #333;
+}
+.galeria {
+  position: relative;
+  text-align: center;
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+.imagen-contenedor {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagen-contenedor img {
+  width: 100%;
+  max-height: 400px;
   object-fit: cover;
 }
 
-
-.experiencia-item .texto h2 {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
+.anterior,
+.siguiente {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
 }
 
-.experiencia-item .texto p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #666;
+.anterior {
+  left: 10px;
 }
 
-/* Estilos para el diseño inverso */
-.experiencia-item.reversed {
-  flex-direction: row-reverse;
+.siguiente {
+  right: 10px;
 }
 
-@media (max-width: 768px) {
-  .experiencia-item {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .experiencia-item .imagen, 
-  .experiencia-item .texto {
-    flex: none;
-    margin-bottom: 20px;
-  }
-
-  .experiencia-item.reversed {
-    flex-direction: column;
-  }
+.texto-fondo {
+  background: rgba(0, 0, 0, 0.6); /* fondo semitransparente */
+  color: white;
+  padding: 10px;
+  position: relative;
+  max-width: 100%;
 }
 
 
