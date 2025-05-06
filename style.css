@@ -28,7 +28,7 @@ body {
 }
 .banner-imagen {
   height: auto;
-  width: 100%;
+  width: auto;
   object-fit: cover; /* Asegura que la imagen se ajuste bien */
 }
 
