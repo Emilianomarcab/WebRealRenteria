@@ -24,7 +24,7 @@ body {
 }
 .banner-imagen {
   height: 100%;
-  width: auto;
+  width: 100%;
   object-fit: cover; /* Asegura que la imagen se ajuste bien */
 }
 
@@ -90,7 +90,7 @@ body {
   transition: background-color 0.3s ease;
 }
 .opcion button:hover {
-  background-color: #002147;
+  background-color: #ad5e03;
 }
 
 /* Mapa */
