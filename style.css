@@ -1,28 +1,164 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-  header {
-    background-color: #f0f0f0;
-    padding: 2rem;
-  }
-  footer {
-    background-color: #ddd;
-    padding: 1rem;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-  .whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25d366;
-    color: white;
-    font-size: 2rem;
-    padding: 10px 15px;
-    border-radius: 50%;
-    text-decoration: none;
-  }
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #fff;
+}
+
+/* Fade-in animation */
+.fade-in {
+  animation: fadeIn 1.2s ease-in;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Banner */
+.banner {
+  height: 250px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.banner-imagen {
+  height: 100%;
+  width: auto;
+  object-fit: cover; /* Asegura que la imagen se ajuste bien */
+}
+
+
+ 
+.titulo {
+  color: white;
+  font-size: 48px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.descripcion {
+  background-image: url('img/fondo-descripcion.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contenido-descripcion p {
+  font-size: 20px;
+  max-width: 700px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.opciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.opcion {
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: 300px;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.opcion:hover {
+  transform: scale(1.05);
+}
+.opcion button {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  padding: 20px 40px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+.opcion button:hover {
+  background-color: #002147;
+}
+
+/* Mapa */
+.mapa {
+  padding: 40px 20px;
+  text-align: center;
+}
+.mapa h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Galería tipo D’Amico */
+.galeria-damico {
+  padding: 40px 20px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+.galeria-damico h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+.imagenes-largas {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.imagenes-largas img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* WhatsApp ícono flotante */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+}
+.whatsapp-float img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.whatsapp-float img:hover {
+  transform: scale(1.1);
+}
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.whatsapp-fsiempoat:hover {
+  transform: scale(1.1);
+}
+.whatsapp-float img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
