@@ -50,10 +50,8 @@ body {
 
 
 .descripcion {
-  background-image: url('img/fondo-descripcion.jpg');
-  background-size: cover;
-  background-position: center;
-  color: white;
+ 
+  color: rgb(0, 0, 0); /* Color de texto negro */
   padding: 60px 20px;
   text-align: center;
 }
@@ -62,10 +60,12 @@ body {
   font-size: 20px;
   max-width: 700px;
   margin: auto;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 255, 255, 0.6); /* Fondo blanco semi-transparente */
   padding: 15px;
   border-radius: 8px;
+  color: rgb(0, 0, 0); /* Color de texto negro */
 }
+
 
 .opciones {
   display: flex;
