@@ -18,8 +18,10 @@ body {
 }
 
 /* Banner */
+
+
 .banner {
-  height: 250px;
+  height: 200px;
   background-color: #000;
   display: flex;
   align-items: center;
