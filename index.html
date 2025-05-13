@@ -5,15 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Real Rentería</title>
   <link rel="stylesheet" href="style.css?v=20240506">
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet"/>
 </head>
 
 <body>
-  <!-- Banner -->
-  <header class="banner fade-in">
-    <img src="img/Cafe6.jpg" alt="Real Rentería" class="banner-imagen" />
-  </header>
+  <!-- Banner para celular -->
+<header class="banner banner-celular fade-in">
+  <img src="img/Cafe6.jpg" alt="Real Rentería" class="banner-imagen" />
+</header>
+
+<!-- Banner para PC con 3 imágenes -->
+<header class="banner banner-pc fade-in">
+  <div class="banner-multiple">
+    <img src="img/Cafe4.jpg" alt="1" />
+    <img src="img/Cafe2.jpg" alt="2" />
+    <img src="img/Cafe3.jpg" alt="3" />
+  </div>
+</header>
+
 
   <!-- Descripción -->
   <section class="descripcion fade-in">
@@ -22,21 +31,25 @@
     </div>
   </section>
 
-  <!-- Opciones -->
-  <section class="opciones fade-in">
-    <div class="opcion" style="background-image: url('img/Louge.jpg');">
-      <button onclick="location.href='menu.html'">Louge</button>
-    </div>
-    <div class="opcion" style="background-image: url('img/Expendio.JPG');">
-      <button onclick="location.href='Expendio.html'">Expendio</button>
-    </div>
-    <div class="opcion" style="background-image: url('img/Bistro.jpg');">
-      <button onclick="location.href='menu.html'">Bistro</button>
-    </div>
-    <div class="opcion" style="background-image: url('img/Bar.jpg');">
-      <button onclick="location.href='menu.html'">Bar</button>
-    </div>
-  </section>
+<!-- Opciones -->
+<section class="opciones fade-in">
+  <a href="menu.html" class="opcion" style="background-image: url('img/Louge.jpg'); text-decoration: none;">
+    <span class="etiqueta-opcion">Louge</span>
+  </a>
+  <a href="Expendio.html" class="opcion" style="background-image: url('img/Expendio.JPG'); text-decoration: none;">
+    <span class="etiqueta-opcion">Expendio</span>
+  </a>
+  <a href="menu.html" class="opcion" style="background-image: url('img/Bistro.jpg'); text-decoration: none;">
+    <span class="etiqueta-opcion">Bistro</span>
+  </a>
+  <a href="menu.html" class="opcion" style="background-image: url('img/Bar.jpg'); text-decoration: none;">
+    <span class="etiqueta-opcion">Bar</span>
+  </a>
+</section>
+
+
+
+
 
 <!--Galeria -->
 <section class="experiencia fade-in" style="display: flex; justify-content: center; align-items: center; height: 50px; ;">
@@ -118,7 +131,7 @@
 
   <!-- Mapa -->
   <section class="mapa fade-in">
-    <h2 style="font-size: 35px; font-family: 'Ubuntu', sans-serif;">Nos ubicamos en Regina 87</h2>
+    <h2 style="font-size: 35px;font-family: 'Ubuntu';">Nos ubicamos en Regina 87</h2>
 
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d316.9441803372385!2d-99.13731466868067!3d19.42796934892738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fffdecc72ceb%3A0xd5c2e4864207028b!2zQ2Fmw6kgUmVhbCBSZW50ZXLDrWE!5e0!3m2!1ses!2smx!4v1746551147827!5m2!1ses!2smx"
@@ -144,7 +157,7 @@
       <a href="https://www.instagram.com/cafe_renteria?igsh=c2d6dTZ2d3B3NTV5" target="_blank">
         <img src="img/instagram.png" alt="Instagram" style="width: 40px; height: 30px;">
       </a>
-      <a href="https://wa.me/52XXXXXXXXXX" target="_blank">
+      <a href="https://tiktok" target="_blank">
         <img src="img/tiktok.png" alt="WhatsApp" style="width: 40px; height: 30px;">
       </a>
     </div>

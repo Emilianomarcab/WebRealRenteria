@@ -1,25 +1,25 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  background-image: url('img/FondoLadrillos.jpg'); /* <-- esta es la ruta */
+  background-image: url('img/FondoLadrillos.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-/* Fade-in animation */
 .fade-in {
   animation: fadeIn 1.2s ease-in;
 }
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
-/* Banner */
-
-
+.banner-celular,
+.banner-pc {
+  display: none;
+}
 .banner {
   height: 200px;
   background-color: #000;
@@ -28,15 +28,14 @@ body {
   justify-content: center;
   overflow: hidden;
 }
+
 .banner-imagen {
-  width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
-  height: auto; /* Mantiene la proporción de la imagen */
-  object-fit: cover; /* Hace que la imagen cubra el área del contenedor sin deformarse */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
-
-
- 
 .titulo {
   color: white;
   font-size: 48px;
@@ -45,13 +44,10 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-
-
-
-
 .descripcion {
- 
-  color: rgb(0, 0, 0); /* Color de texto negro */
+  font-size: 18px;
+  margin-top: 20px;
+  color: #333;
   padding: 60px 20px;
   text-align: center;
 }
@@ -60,12 +56,24 @@ body {
   font-size: 20px;
   max-width: 700px;
   margin: auto;
-  background-color: rgba(255, 255, 255, 0.6); /* Fondo blanco semi-transparente */
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 15px;
   border-radius: 8px;
-  color: rgb(0, 0, 0); /* Color de texto negro */
+  color: rgb(0, 0, 0);
 }
-
+.etiqueta-opcion {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px 40px;
+  font-weight: bold;
+  border-radius: 6px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: black;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
 
 .opciones {
   display: flex;
@@ -73,6 +81,13 @@ body {
   justify-content: center;
   gap: 20px;
   padding: 40px 20px;
+}
+
+.opcion-link {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .opcion {
@@ -83,11 +98,26 @@ body {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px #000;
+  cursor: pointer;
   transition: transform 0.3s ease;
 }
+
 .opcion:hover {
   transform: scale(1.05);
 }
+
+.opcion:active {
+  filter: brightness(0.85);
+}
+
 .opcion button {
   position: absolute;
   bottom: 15px;
@@ -96,54 +126,19 @@ body {
   border: none;
   padding: 20px 40px;
   font-weight: bold;
-  cursor: pointer;
+  cursor: default;
+  pointer-events: none;
   border-radius: 6px;
   transition: background-color 0.3s ease;
 }
+
 .opcion button:hover {
   background-color: #ad5e03;
 }
 
 .galeria {
+  position: relative;
   padding: 40px 20px;
-  text-align: center;
- /* background-color: #f4f4f4; */
-}
-
-.imagen-contenedor {
-  position: relative;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.imagen-contenedor img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  border-radius: 10px;
-}
-
-.siguiente {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  font-size: 30px;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 50%;
-}
-
-.descripcion {
-  font-size: 18px;
-  margin-top: 20px;
-  color: #333;
-}
-.galeria {
-  position: relative;
   text-align: center;
   max-width: 100%;
   margin-top: 20px;
@@ -154,12 +149,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .imagen-contenedor img {
   width: 100%;
-  max-height: 400px;
+  height: 400px;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .anterior,
@@ -176,40 +174,31 @@ body {
   z-index: 1;
 }
 
-.anterior {
-  left: 10px;
-}
-
-.siguiente {
-  right: 10px;
-}
+.anterior { left: 10px; }
+.siguiente { right: 10px; }
 
 .texto-fondo {
-  background: rgba(0, 0, 0, 0.6); /* fondo semitransparente */
+  background: rgba(0, 0, 0, 0.6);
   color: white;
   padding: 10px;
   position: relative;
   max-width: 100%;
 }
 
-
-/* Mapa */
-
-
-
+#ubicacion {
+  font-size: 35px;
+  font-family: 'Ubuntu', sans-serif;
+}
 
 .mapa {
   padding: 40px 20px;
   text-align: center;
-
-} 
-
-
+}
 
 .mapa iframe {
-  border: 2px solid #ccc; /* Añade un borde alrededor del iframe */
-  border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .mapa h2 {
@@ -217,21 +206,23 @@ body {
   margin-bottom: 20px;
 }
 
-/* Galería tipo D’Amico */
 .galeria-damico {
   padding: 40px 20px;
   background-color: #f8f8f8;
   text-align: center;
 }
+
 .galeria-damico h2 {
   font-size: 28px;
   margin-bottom: 30px;
 }
+
 .imagenes-largas {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
+
 .imagenes-largas img {
   width: 100%;
   height: auto;
@@ -239,7 +230,6 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* WhatsApp ícono flotante */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -247,28 +237,10 @@ body {
   z-index: 999;
   width: 60px;
   height: 60px;
-}
-.whatsapp-float img {
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-.whatsapp-float img:hover {
-  transform: scale(1.1);
-}
-.whatsapp-float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 20px;
-  right: 20px;
-  z-index: 100;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-.whatsapp-fsiempoat:hover {
-  transform: scale(1.1);
-}
+
 .whatsapp-float img {
   width: 100%;
   height: 100%;
@@ -276,3 +248,155 @@ body {
   background-color: transparent;
 }
 
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* Mostrar solo en celular */
+@media (max-width: 1024px) {
+  .banner-celular {
+    display: block;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .banner-celular .banner-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+/* PANTALLAS GRANDES */
+@media (min-width: 1025px) {
+  
+  .banner-pc {
+    display: block;
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .banner-multiple {
+    display: flex;
+    height: 100%;
+  }
+
+  .banner-multiple img {
+    width: 33.33%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  .contenido-descripcion p {
+    font-size: 22px;
+    padding: 25px;
+    max-width: 800px;
+  }
+
+  .opciones {
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 40px;
+  }
+
+  .opcion {
+    width: 300px;
+    height: 250px;
+  }
+
+  .etiqueta-opcion {
+    font-size: 1.2rem;
+    padding: 18px 35px;
+  }
+
+  .imagen-contenedor img {
+    height: 400px;
+  }
+
+  .mapa iframe {
+    height: 350px;
+  }
+
+  .mapa h2 {
+    font-size: 32px;
+  }
+
+  .galeria {
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  footer p {
+    font-size: 22px !important;
+  }
+
+  .galeria-damico {
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  .imagenes-largas img {
+    max-height: 600px;
+    object-fit: cover;
+  }
+}
+/* ESTILO ESPECÍFICO PARA PANTALLAS GRANDES */
+@media (min-width: 1025px) {
+  .contenido-descripcion p {
+    font-size: 22px;
+    padding: 25px;
+    max-width: 800px;
+  }
+
+  .opciones {
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 40px;
+  }
+
+  .opcion {
+    width: 300px;
+    height: 250px;
+  }
+
+  .etiqueta-opcion {
+    font-size: 1.2rem;
+    padding: 18px 35px;
+  }
+
+  .imagen-contenedor img {
+    height: 400px;
+  }
+
+  .mapa iframe {
+    height: 350px;
+  }
+
+  .mapa h2 {
+    font-size: 32px;
+  }
+
+  .galeria {
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  footer p {
+    font-size: 22px !important;
+  }
+
+  .galeria-damico {
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  .imagenes-largas img {
+    max-height: 600px;
+    object-fit: cover;
+  }
+  .banner {
+    height: 350px;
+  }
+}
