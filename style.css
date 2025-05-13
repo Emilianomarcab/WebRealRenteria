@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  background-image: url('img/FondoLadrillos.jpg');
+  background-image: url('img/FondoColor.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -21,13 +21,9 @@ body {
   display: none;
 }
 .banner {
-  height: 200px;
-  background-color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  display: none;
 }
+
 
 .banner-imagen {
   width: 100%;
@@ -285,8 +281,19 @@ body {
   .banner-multiple img {
     width: 33.33%;
     height: 100%;
-    object-fit: cover;
   }
+  
+  .banner-multiple img:nth-child(1),
+  .banner-multiple img:nth-child(3) {
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .banner-multiple img:nth-child(2) {
+    object-fit: contain;
+    background-color: #000; /* para evitar espacios feos si tiene fondo transparente */
+  }
+  
 
 
   .contenido-descripcion p {
@@ -342,61 +349,91 @@ body {
     object-fit: cover;
   }
 }
-/* ESTILO ESPECÍFICO PARA PANTALLAS GRANDES */
+.contenido-con-gif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: nowrap;
+}
+
+.gif-lateral {
+  display: none; /* Ocultos por defecto */
+}
+
+.gif-lateral video {
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+
+/* Mostrar MP4 solo en PC */
 @media (min-width: 1025px) {
-  .contenido-descripcion p {
-    font-size: 22px;
-    padding: 25px;
-    max-width: 800px;
+  .gif-lateral {
+    display: block;
   }
+}
+.gif-lateral {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
 
-  .opciones {
-    justify-content: center;
-    gap: 30px;
-    padding: 60px 40px;
+@media (min-width: 1025px) {
+  .gif-lateral {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+.gif-lateral {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
 
-  .opcion {
-    width: 300px;
-    height: 250px;
+@media (min-width: 1025px) {
+  .gif-lateral {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+/* CONTENEDOR PRINCIPAL CON VIDEOS A LOS LADOS */
+.contenido-con-gif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: nowrap;
+  margin-top: 40px;
+}
 
-  .etiqueta-opcion {
-    font-size: 1.2rem;
-    padding: 18px 35px;
-  }
+/* VIDEO LATERAL: estilo base */
+.gif-lateral {
+  display: none; /* Ocultos por defecto */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
 
-  .imagen-contenedor img {
-    height: 400px;
-  }
+/* Estilo para el <video> dentro */
+.gif-lateral video {
+  width: 700px;           /* AUMENTA AQUÍ el tamaño */
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
 
-  .mapa iframe {
-    height: 350px;
-  }
-
-  .mapa h2 {
-    font-size: 32px;
-  }
-
-  .galeria {
-    max-width: 1000px;
-    margin: auto;
-  }
-
-  footer p {
-    font-size: 22px !important;
-  }
-
-  .galeria-damico {
-    max-width: 1100px;
-    margin: auto;
-  }
-
-  .imagenes-largas img {
-    max-height: 600px;
-    object-fit: cover;
-  }
-  .banner {
-    height: 350px;
+/* VISIBILIDAD y ANIMACIÓN SOLO EN PC */
+@media (min-width: 1025px) {
+  .gif-lateral {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
   }
 }

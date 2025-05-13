@@ -11,14 +11,14 @@
 <body>
   <!-- Banner para celular -->
 <header class="banner banner-celular fade-in">
-  <img src="img/Cafe6.jpg" alt="Real Rentería" class="banner-imagen" />
+  <img src="img/Tituloplano.png" alt="Real Rentería" class="banner-imagen" />
 </header>
 
 <!-- Banner para PC con 3 imágenes -->
 <header class="banner banner-pc fade-in">
   <div class="banner-multiple">
     <img src="img/Cafe4.jpg" alt="1" />
-    <img src="img/Cafe2.jpg" alt="2" />
+    <img src="img/Tituloplano.png" alt="2" />
     <img src="img/Cafe3.jpg" alt="3" />
   </div>
 </header>
@@ -72,43 +72,40 @@
 </section>
 
 
-<section style="padding: 40px 20px; text-align: center; ">
+<section class="nuestra-finca-con-gif fade-in" style="padding: 40px 20px; text-align: center;">
   <h2 style="font-family: 'Playfair Display', serif; font-size: 30px; margin-bottom: 30px;">Origen de Nuestro Café</h2>
 
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-  
-    <div style="width: 300px; background-color: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); overflow: hidden;">
-      <img src="img/Expendio.JPG" alt="Café de Chiapas" style="width: 100%; height: auto;">
-      <div style="padding: 20px;">
-        <h3 style="margin: 0;">Nuestra Finca</h3>
-        <p style="font-size: 14px;">donde producimos cafe</p>
-        <a href="NuestraFinca.html" style="display: inline-block; margin-top: 10px; text-decoration: none; background: #000; color: #fff; padding: 10px 20px; border-radius: 5px;">Ver historia</a>
+  <div class="contenido-con-gif">
+    <!-- MP4 izquierda -->
+    <div class="gif-lateral gif-izquierda">
+      <video autoplay loop muted playsinline>
+        <source src="video/tostando1.mp4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+      </video>
+    </div>
+    
+
+    <!-- Contenido principal -->
+    <div class="bloque-finca">
+      <div style="width: 300px; background-color: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); overflow: hidden;">
+        <img src="img/Expendio.JPG" alt="Café de Chiapas" style="width: 100%; height: auto;">
+        <div style="padding: 20px;">
+          <h3 style="margin: 0;">Nuestra Finca</h3>
+          <p style="font-size: 14px;">donde producimos café</p>
+          <a href="NuestraFinca.html" style="display: inline-block; margin-top: 10px; text-decoration: none; background: #000; color: #fff; padding: 10px 20px; border-radius: 5px;">Ver historia</a>
+        </div>
       </div>
     </div>
 
+    <!-- MP4 derecho -->
 
-
-
-    <!--
-    <div style="width: 300px; background-color: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); overflow: hidden;">
-      <img src="img/Cafe1.jpg" alt="Café de Chiapas" style="width: 100%; height: auto;">
-      <div style="padding: 20px;">
-        <h3 style="margin: 0;">Café de Arabico</h3>
-        <p style="font-size: 14px;">Descripcion del cafe</p>
-        <a href="HistoriaArabica.html" style="display: inline-block; margin-top: 10px; text-decoration: none; background: #000; color: #fff; padding: 10px 20px; border-radius: 5px;">Ver historia</a>
-      </div>
+    <div class="gif-lateral gif-derecha">
+      <video autoplay loop muted playsinline>
+        <source src="video/tostando2.mp4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+      </video>
     </div>
-
-    <div style="width: 300px; background-color: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); overflow: hidden;">
-      <img src="img/Cafe2.jpg" alt="Café de Oaxaca" style="width: 100%; height: auto;">
-      <div style="padding: 20px;">
-        <h3 style="margin: 0;">Café de Robusta</h3>
-        <p style="font-size: 14px;">Descripcion del cafe</p>
-        <a href="HistoriaRobusta.html" style="display: inline-block; margin-top: 10px; text-decoration: none; background: #000; color: #fff; padding: 10px 20px; border-radius: 5px;">Ver historia</a>
-      </div>
-    </div>
-
-  </div> -->
+  </div>
 </section>
 
 
