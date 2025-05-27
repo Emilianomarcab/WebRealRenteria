@@ -2,28 +2,103 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Expendio - Real Rentería</title>
-  <link rel="stylesheet" href="style.css?v=20240506">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menú Lounge - Real Rentería</title>
+  <link rel="stylesheet" href="estilo-expendio.css" />
 </head>
+<body style="opacity: 0; transition: opacity 1s ease-in-out;" onload="document.body.style.opacity = 1;">
+  <a href="#comprar" style="position: fixed; bottom: 20px; left: 20px; background-color: #6F4E37; color: white; padding: 18px 32px; font-size: 1.2rem; border-radius: 40px; font-weight: bold; text-decoration: none; box-shadow: 0 6px 14px rgba(0,0,0,0.25); z-index: 1000; transition: background 0.3s ease;">Comprar Grano</a>
+  
+    <section id="expendio">
+      <h2><img src="img/DecoracionCafe.png" alt="Ícono café" style="width: 50px; vertical-align: middle; margin-right: 0.5rem;">Expendio de Café</h2>
+    
 
-<body>
+      
+      
 
-  <header style="text-align: center; padding: 20px;background-color: bisque;">
-    <h1 style="font-family: 'Playfair Display', serif;">Expendio Real Rentería</h1>
-    <p>Descubre nuestro espacio dedicado al café para llevar, granos selectos y más.</p>
-  </header>
+      <div class="grano-contenedor">
+        <div class="grano">
+          <h3>Grano Arábica</h3>
+          <img src="img/Cafe1.jpg" alt="Grano Arábica" style="width: 100%; border-radius: 8px; margin-bottom: 0.5rem;">
+          <ul>
+            <li><strong>Sabor:</strong> Suave, dulce, con notas florales y frutales</li>
+            <li><strong>Acidez:</strong> Alta</li>
+            <li><strong>Cafeína:</strong> Baja</li>
+          </ul>
+        </div>
 
-  <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; padding: 20px;">
-    <img src="img/Cafe1.jpg" alt="Expendio 1" style="width:100%; border-radius: 8px;">
-    <img src="img/Cafe2.jpg" alt="Expendio 2" style="width:100%; border-radius: 8px;">
-    <img src="img/Cafe4.jpg" alt="Expendio 3" style="width:100%; border-radius: 8px;">
-    <img src="img/Cafe5.jpg" alt="Expendio 4" style="width:100%; border-radius: 8px;">
-  </section>
+        <div class="grano">
+          <h3>Grano Robusta</h3>
+          <img src="img/Cafe2.jpg" alt="Grano Robusta" style="width: 100%; border-radius: 8px; margin-bottom: 0.5rem;">
+          <ul>
+            <li><strong>Sabor:</strong> Intenso, terroso, con notas amargas</li>
+            <li><strong>Acidez:</strong> Baja</li>
+            <li><strong>Cafeína:</strong> Alta</li>
+          </ul>
+        </div>
+      </div>
 
-  <footer style="text-align: center; padding: 20px; font-size: 14px;">
-    <a href="index.html">← Volver al inicio</a>
+      <hr style="margin: 3rem 0; border: none; border-top: 2px dashed #6F4E37;">
+
+      <h2 style="text-align: center; font-size: 2rem; color: #6F4E37; margin-bottom: 1rem;"><img src="img/DecoracionExpendio.png" 
+        alt="Ícono café" style="width: 30px; vertical-align: middle; margin-right: 0.5rem;">Nuestras Mezclas</h2>
+      
+
+      <div class="grano-contenedor">
+        <div class="grano">
+          <h3>Sofía</h3>
+          <ul>
+            <li><strong>Grano:</strong> 100% Arábica</li>
+            <li><strong>Tostado:</strong> Medio</li>
+            <li><strong>Notas:</strong> Vainilla y chocolate</li>
+            <li><strong>Molido:</strong> Disponible para cualquier cafetera</li>
+          </ul>
+        </div>
+
+        <div class="grano">
+          <h3>La Familia</h3>
+          <ul>
+            <li><strong>Grano:</strong> 90% Arábica, 10% Robusta</li>
+            <li><strong>Tostado:</strong> Medio</li>
+            <li><strong>Notas:</strong> Cítricos</li>
+            <li><strong>Molido:</strong> Disponible para cualquier cafetera</li>
+          </ul>
+        </div>
+
+        <div class="grano">
+          <h3>Capricho</h3>
+          <ul>
+            <li><strong>Grano:</strong> 70% Arábica, 30% Robusta</li>
+            <li><strong>Tostado:</strong> Medio</li>
+            <li><strong>Notas:</strong> Cítricos, vainilla y especias</li>
+            <li><strong>Molido:</strong> Disponible para cualquier cafetera</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem; text-align: center;">
+  <h3 style="color: #6F4E37;">Precios por presentación</h3>
+  <ul style="list-style: none; padding: 0; margin: 0 auto; max-width: 400px;">
+    <li><strong>1/4 kg:</strong> $100 MXN</li>
+    <li><strong>1/2 kg:</strong> $150 MXN</li>
+    <li><strong>1 kg:</strong> $290 MXN</li>
+    <li style="margin-top: 1rem; font-style: italic; color: #555;">
+      * A partir de 10 kg, el precio por kilo es de <strong>$250 MXN</strong>
+    </li>
+  </ul>
+</div>
+
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Café Real Rentería - Todos los derechos reservados</p>
   </footer>
+
+  <a href="/menu-lounge.html" style="position: fixed; bottom: 20px; right: 20px; background-color: #6F4E37;
+    color: white; padding: 10px 20px; font-size: 0.85rem; border-radius: 30px; font-weight: bold;
+    text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.2); z-index: 1000; transition: background 0.3s ease;">Menú</a>
 
 </body>
 </html>

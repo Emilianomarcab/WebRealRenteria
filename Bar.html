@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bar - Cocteles Real Rentería</title>
+  <link rel="stylesheet" href="estilo-bar.css" />
+</head>
+<body>
+  <div class="header" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; text-align: center; padding: 0; margin: 0; line-height: 1; gap: 1rem; height: auto; min-height: 0;">
+    <img src="img/LogoNegro.png" alt="Logo Café Real Rentería" style="height: clamp(80px, 20vw, 200px); width: auto; object-fit: contain; margin: 0; padding: 0; display: block;" />
+    <h2 style="font-size: clamp(2.25rem, 7vw, 5.25rem); text-shadow: 2px 2px 4px #000; letter-spacing: 2px; font-weight: bold; text-align: center; flex: 1;">Café Real Rentería</h2>
+    <a href="index.html" style="display: flex; align-items: center;">
+  <img src="img/imagenmenu.png" alt="Regresar al menú" style="height: clamp(120px, 30vw, 300px); width: auto; object-fit: contain; margin: 0; padding: 0; display: block;" />
+</a>
+  </div>
+
+  <h1 style="color: white; font-size: clamp(2rem, 6vw, 4rem); margin: 0; padding: 0.5rem 0 0 0;">Menú del Bar - Real Rentería</h1>
+
+  <!-- Menú de Tabs -->
+  <div class="tabs">
+    <button class="tablink active" onclick="showTab('cocteleria')">Coctelería</button>
+    <button class="tablink" onclick="showTab('carajillos')">Carajillos</button>
+    <button class="tablink" onclick="showTab('mascafe')">Más Café</button>
+    <button class="tablink" onclick="showTab('margaritas')">Margaritas</button>
+    <button class="tablink" onclick="showTab('mezcalinas')">Mezcalinas</button>
+    <button class="tablink" onclick="showTab('aperol')">Aperol</button>
+    <button class="tablink" onclick="showTab('vino')">Vino</button>
+    <button class="tablink" onclick="showTab('cerveza')">Cerveza</button>
+  </div>
+
+  <!-- Plantilla de tarjetas -->
+  <template id="coctel-template">
+    <div class="coctel-card">
+      <div class="coctel-img">
+  <img src="img/negroni.jpg" alt="Negroni" />
+</div>
+      <div class="coctel-name">Negroni</div>
+<div class="coctel-desc">[Ingredientes]</div>
+      <div class="coctel-extra">
+        <p><strong>Descripción:</strong> [A llenar]</p>
+        <p><strong>Nivel de alcohol:</strong> [A llenar]</p>
+        <p><strong>Tamaño:</strong> [A llenar]</p>
+        <p><strong>Precio:</strong> [A llenar]</p>
+      </div>
+    </div>
+  </template>
+
+  <!-- Secciones (vacías por ahora para mantener estructura) -->
+  <div id="cocteleria" class="tab-content active">
+    <div class="grid-container">
+      <div class="coctel-card">
+        <div class="coctel-img">
+          <img src="img/negroni.jpg" alt="Negroni" />
+        </div>
+        <div class="coctel-name">Negroni</div>
+        <div class="coctel-desc">[Ingredientes]</div>
+        <div class="coctel-extra">
+          <p><strong>Descripción:</strong> [A llenar]</p>
+          <p><strong>Nivel de alcohol:</strong> [A llenar]</p>
+          <p><strong>Tamaño:</strong> [A llenar]</p>
+          <p><strong>Precio:</strong> [A llenar]</p>
+        </div>
+      </div>
+      <div class="coctel-card">
+        <div class="coctel-img">
+          <img src="img/oldfashioned.jpg" alt="Old Fashioned" />
+        </div>
+        <div class="coctel-name">Old Fashioned</div>
+        <div class="coctel-desc">[Ingredientes]</div>
+        <div class="coctel-extra">
+          <p><strong>Descripción:</strong> [A llenar]</p>
+          <p><strong>Nivel de alcohol:</strong> [A llenar]</p>
+          <p><strong>Tamaño:</strong> [A llenar]</p>
+          <p><strong>Precio:</strong> [A llenar]</p>
+        </div>
+      </div></div></div>
+
+
+
+  <div id="carajillos" class="tab-content"><div class="grid-container">
+
+    <div class="coctel-card">
+      <div class="coctel-img">
+  <img src="img/Carajillo.jpg" alt="Carajillos" />
+</div>
+      <div class="coctel-name">Carajillos</div>
+<div class="coctel-desc">[Ingredientes]</div>
+      <div class="coctel-extra">
+        <p><strong>Descripción:</strong> [A llenar]</p>
+        <p><strong>Nivel de alcohol:</strong> [A llenar]</p>
+        <p><strong>Tamaño:</strong> [A llenar]</p>
+        <p><strong>Precio:</strong> [A llenar]</p>
+      </div>
+    </div>
+
+
+
+  </div></div>
+  <div id="mascafe" class="tab-content"><div class="grid-container"></div></div>
+  <div id="margaritas" class="tab-content"><div class="grid-container"></div></div>
+  <div id="mezcalinas" class="tab-content"><div class="grid-container"></div></div>
+  <div id="aperol" class="tab-content"><div class="grid-container"></div></div>
+  <div id="vino" class="tab-content"><div class="grid-container"></div></div>
+  <div id="cerveza" class="tab-content"><div class="grid-container"></div></div>
+
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('.tablink').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      event.currentTarget.classList.add('active');
+    }
+  </script>
+</body>
+</html>
