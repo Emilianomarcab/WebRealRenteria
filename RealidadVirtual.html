@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <title>Platillo 3D</title>
+    <title>AR Platillo</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/2.1.8/aframe/build/aframe-ar.min.js"></script>
+    <style>
+      body { margin: 0; overflow: hidden; }
+    </style>
   </head>
-  <body style="margin: 0; background-color: #111; color: white; text-align: center;">
-    <h2>Platillo 3D escaneado</h2>
-    <model-viewer 
-      src="Platillo.glb"
-      alt="Platillo escaneado"
-      auto-rotate
-      camera-controls
-      ar
-      ar-modes="webxr scene-viewer quick-look"
-      style="width: 100%; height: 500px;">
-    </model-viewer>
+  <body>
+    <a-scene embedded arjs>
+      <a-assets>
+        <a-asset-item id="modelo" src="Platillo.glb"></a-asset-item>
+      </a-assets>
+
+      <!-- Este es el marcador personalizado (tu QR) -->
+      <a-marker type="pattern" url="qr.patt">
+        <a-entity gltf-model="#modelo" scale="0.05 0.05 0.05" position="0 0 0"></a-entity>
+      </a-marker>
+
+      <a-entity camera></a-entity>
+    </a-scene>
   </body>
 </html>
