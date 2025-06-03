@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Real Rentería</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet"/>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Fuentes y colores */
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #C7B998;
+      color: #000;
+      opacity: 0;
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* Barra de navegación */
+    .barra-navegacion {
+      position: sticky;
+      top: 0;
+      background-color: #002147; /* Oxford Blue */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2vw;
+      z-index: 1000;
+      border-bottom: 1px solid #b3874e;
+      height: 12vh;
+    }
+
+    /* Grupo de dos imágenes a la izquierda */
+    .logo-group {
+      display: flex;
+      align-items: center;
+      gap: 1vw;
+    }
+
+    .logo-group img {
+      height: 110px; /* Tamaño relativo en escritorio */
+      width: auto;
+    }
+
+    /* Opciones de navegación a la derecha */
+    .barra-opciones {
+      display: flex;
+      gap: 3vw;
+      justify-content: flex-end;
+      align-items: center;
+      flex: 1;
+    }
+
+    .barra-opciones a {
+      color: #fff;
+      font-weight: bold;
+      font-size: 2vw; /* Tamaño relativo en escritorio */
+      transition: color 0.3s ease;
+    }
+
+    .barra-opciones a:hover {
+      color: #c8914b;
+    }
+
+    /* Secciones principales */
+    section {
+      padding: 6vh 2vw;
+      text-align: center;
+    }
+
+    .titulo-principal {
+      font-size: 4vw;
+      margin: 0; /* Eliminado espacio arriba y abajo */
+      font-style: italic;
+      color: #002147;
+    }
+
+    .seccion-area {
+      max-width: 90vw;
+      margin: auto;
+      background-color: #002147;
+      border-radius: 10px;
+      padding: 3vh 2vw;
+      margin-bottom: 4vh;
+    }
+
+    .seccion-area img {
+      width: 100%;
+      max-height: 30vh;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 2vh;
+    }
+
+    .seccion-area h2 {
+      font-size: 3vw;
+      margin-bottom: 1vh;
+      color: #002147;
+    }
+
+    .seccion-area p {
+      font-size: 1.5vw;
+      margin-bottom: 2vh;
+      color: #ffffff;
+    }
+
+    .seccion-area a {
+      background-color: #c8914b;
+      color: #000;
+      padding: 1vh 2vw;
+      border-radius: 5px;
+      font-weight: bold;
+      display: inline-block;
+      font-size: 1.5vw;
+      transition: background-color 0.3s ease;
+    }
+
+    .seccion-area a:hover {
+      background-color: #b07e3f;
+    }
+
+    /* Galería simple */
+    .galeria {
+      max-width: 90vw;
+      margin: auto;
+    }
+
+    .galeria img {
+      width: 100%;
+      max-height: 40vh;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    /* Historia con video */
+    .contenido-con-gif {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5vw;
+      flex-wrap: wrap;
+      margin-bottom: 4vh;
+    }
+
+    .gif-lateral video {
+      width: 15vw;
+      max-width: 200px;
+      border-radius: 10px;
+    }
+
+    .bloque-finca {
+      background-color: #fff;
+      color: #000;
+      padding: 2vh 1vw;
+      border-radius: 10px;
+      max-width: 30vw;
+      min-width: 200px;
+    }
+
+    .bloque-finca img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1.5vh;
+    }
+
+    .bloque-finca h3 {
+      font-size: 2.5vw;
+      margin-bottom: 1vh;
+      color: #002147;
+    }
+
+    .bloque-finca p {
+      font-size: 1.2vw;
+      margin-bottom: 1.5vh;
+    }
+
+    .bloque-finca a {
+      font-size: 1.5vw;
+      background-color: #c8914b;
+      color: #000;
+      padding: 1vh 2vw;
+      border-radius: 5px;
+      display: inline-block;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .bloque-finca a:hover {
+      background-color: #b07e3f;
+    }
+
+    /* Sección de texto con imagen derecha */
+    .texto-imagen {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      max-width: 90vw;
+      margin: 0 auto;
+      gap: 2vw;
+      padding: 0;
+    }
+    .texto-imagen .texto {
+      flex: 1;
+      text-align: center;
+    }
+    .texto-imagen .texto p {
+      font-size: 2vw; /* Ajustado a 2vw */
+      margin-bottom: 1vh;
+      color: #000000;
+      text-align: center;
+    }
+    .texto-imagen .texto .linea-azul {
+      width:70%; /* Duplicado para mayor longitud */
+      height: 1px; /* Duplicado grosor */
+      background-color: #7f7fd3; /* Color claro */
+      margin: 1vh auto;
+    }
+    .texto-imagen .texto .mas-texto {
+      font-size: 2vw; /* Ajustado a 2vw */
+      color: #000000;
+      text-align: center;
+    }
+    .texto-imagen .imagen {
+      width: 30%;
+    }
+    .texto-imagen .imagen img {
+      width: 100%;
+      border-radius: 40px;
+      object-fit: cover;
+    }
+
+    /* Mapa embebido */
+    .mapa h2 {
+      font-size: 2.5vw;
+      margin-bottom: 2vh;
+      color: #002147;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000;
+      text-align: center;
+      padding: 2vh 0;
+    }
+
+    footer p {
+      color: #c8914b;
+      font-size: 1.5vw;
+      margin-bottom: 1.5vh;
+    }
+
+    footer img {
+      width: 5vw;
+      max-width: 40px;
+      margin: 0 2vw;
+      filter: invert(100%);
+      transition: filter 0.3s ease;
+    }
+
+    footer img:hover {
+      filter: invert(60%) sepia(60%) hue-rotate(10deg);
+    }
+
+    /* Botón flotante “Menú” */
+    .btn-flotante {
+      position: fixed;
+      bottom: 2vh;
+      right: 2vw;
+      background-color: #c8914b;
+      color: #000;
+      padding: 1vh 2vw;
+      border-radius: 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 1.5vw;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      z-index: 1001;
+    }
+
+    .btn-flotante:hover {
+      background-color: #b07e3f;
+      transform: translateY(-2px);
+    }
+
+    /* Ajustes para pantallas pequeñas */
+    @media (max-width: 768px) {
+      /* Ocultar <br> en móvil */
+      .texto-imagen .texto br { display: none; }
+      
+      .barra-navegacion {
+        flex-direction: column;
+        height: auto;
+        padding: 1vh 0;
+        gap: 1vh;
+        align-items: center;
+      }
+      .logo-group {
+        width: 100%;
+        justify-content: center;
+        gap: 2vw;
+      }
+      .logo-group img {
+        height: 95px; /* Imágenes en celular */
+      }
+      .barra-opciones {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 4vw;
+        margin-top: 1vh;
+      }
+      .barra-opciones a {
+        font-size: 4vw;
+      }
+
+      .texto-imagen {
+        flex-direction: column;
+        align-items: center;
+      }
+      /* ===== Ancho móvil se mantiene en 80vw ===== */
+      .texto-imagen .imagen {
+        width: 80vw;
+        margin-bottom: 2vh;
+      }
+      .texto-imagen .texto {
+        width: 90vw;
+      }
+      .texto-imagen .texto p, .texto-imagen .texto .mas-texto {
+        font-size: 4vw;
+      }
+
+      .contenido-con-gif {
+        flex-direction: column;
+      }
+
+      .gif-lateral video {
+        width: 80vw;
+        max-width: none;
+      }
+
+      .titulo-principal {
+        font-size: 8vw;
+      }
+
+      .seccion-area h2 {
+        font-size: 6vw;
+      }
+
+      .seccion-area p, .seccion-area a {
+        font-size: 4vw;
+      }
+
+      .bloque-finca h3 {
+        font-size: 6vw;
+      }
+
+      .bloque-finca p, .bloque-finca a {
+        font-size: 4vw;
+      }
+
+      .mapa h2 {
+        font-size: 6vw;
+      }
+
+      footer p {
+        font-size: 5vw;
+      }
+
+      footer img {
+        width: 10vw;
+      }
+
+      .btn-flotante {
+        font-size: 5vw;
+        padding: 2vh 4vw;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Barra de navegación con grupo de imágenes y opciones -->
+  <nav class="barra-navegacion">
+    <div class="logo-group">
+      <img src="img/LogoBlancosinletras.png" alt="Logo Café Real Rentería">
+      <img src="img/Logoblancoletras.png" alt="Imagen Secundaria">
+    </div>
+    <div class="barra-opciones">
+      <a href="Loungue.html">Lounge</a>
+      <a href="Expendio.html">Expendio</a>
+      <a href="Bistro.html">Bistro</a>
+      <a href="Bar.html">Bar</a>
+      <a href="Historia.html">Historia</a>
+    </div>
+  </nav>
+
+  <!-- Título principal -->
+  <section>
+    <p class="titulo-principal">Bienvenidos a Real Rentería</p>
+  </section>
+
+  <!-- Nueva sección previa a Lounge: texto con imagen a la derecha -->
+  <section class="texto-imagen">
+    <div class="texto">
+        <br><br><br>
+      <p>Café familiar con tradición y pasión por el sabor.</p>
+      <p>Ambientes cálidos y atención personalizada.</p>
+      <p>Disfruta de nuestros sabores en cada taza.</p>
+      <div class="linea-azul"></div>
+      <p class="mas-texto">Conoce nuestros orígenes en Veracruz.</p>
+    </div>
+    <div class="imagen">
+      <img src="img/primeraimg.jpg" alt="Imagen descriptiva con bordes redondeados" />
+    </div>
+  </section>
+
+  <!-- Sección Lounge -->
+  <section class="seccion-area" id="lounge">
+    <img src="img/Experiencia3.jpg" alt="Lounge">
+    <h2>Lounge</h2>
+    <p>Zona elegante para relajarse y disfrutar de un cóctel artesanal.</p>
+    <a href="lounge.html">Explorar</a>
+  </section>
+
+  <!-- Sección Expendio -->
+  <section class="seccion-area" id="expendio">
+    <img src="img/Expendio.JPG" alt="Expendio">
+    <h2>Expendio</h2>
+    <p>Llévate a casa nuestro café de especialidad en grano o molido.</p>
+    <a href="Expendio.html">Explorar</a>
+  </section>
+
+  <!-- Sección Bistro -->
+  <section class="seccion-area" id="bistro">
+    <img src="img/Bistro.jpg" alt="Bistro">
+    <h2>Bistro</h2>
+    <p>Comida ligera y café en un ambiente íntimo y acogedor.</p>
+    <a href="bistro.html">Explorar</a>
+  </section>
+
+  <!-- Sección Bar -->
+  <section class="seccion-area" id="bar">
+    <img src="img/Bar.jpg" alt="Bar">
+    <h2>Bar</h2>
+    <p>Bebidas premium, mixología y buena música para cerrar el día.</p>
+    <a href="bar.html">Explorar</a>
+  </section>
+
+  <!-- Galería / Experiencia -->
+  <section class="galeria" id="experiencia">
+    <h2>Experiencia</h2>
+    <img src="img/Cafe4.jpg" alt="Experiencia">
+  </section>
+
+  <!-- Historia -->
+  <section id="historia">
+    <h2 style="margin-bottom: 30px;">Origen de Nuestro Café</h2>
+    <div class="contenido-con-gif">
+      <div class="gif-lateral">
+        <video autoplay loop muted playsinline>
+          <source src="video/tostando1.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="bloque-finca">
+        <img src="img/Expendio.JPG" alt="Nuestra Finca">
+        <h3>Nuestra Finca</h3>
+        <p>donde producimos café</p>
+        <a href="NuestraFinca.html">Ver historia</a>
+      </div>
+      <div class="gif-lateral">
+        <video autoplay loop muted playsinline>
+          <source src="video/tostando2.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mapa de ubicación -->
+  <section class="mapa">
+    <h2 style="color: white;">Nos ubicamos en Regina 87</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d316.9441803372385!2d-99.13731466868067!3d19.42796934892738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fffdecc72ceb%3A0xd5c2e4864207028b!2zQ2Fmw6kgUmVhbCBSZW50ZXLDrWE!5e0!3m2!1ses!2smx!4v1746551147827!5m2!1ses!2smx"
+      allowfullscreen loading="lazy">
+    </iframe>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Síguenos en redes sociales</p>
+    <div>
+      <a href="https://www.facebook.com/tu_pagina" target="_blank"><img src="img/facebook.png" alt="Facebook"></a>
+      <a href="https://www.instagram.com/cafe_renteria" target="_blank"><img src="img/instagram.png" alt="Instagram"></a>
+      <a href="https://tiktok.com" target="_blank"><img src="img/tiktok.png" alt="TikTok"></a>
+    </div>
+  </footer>
+
+  <!-- Botón flotante “Menú” -->
+  <a href="#lounge" class="btn-flotante">Menú</a>
+
+</body>
+</html>
