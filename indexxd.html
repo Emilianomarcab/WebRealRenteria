@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Real Rentería</title>
+  <link rel="stylesheet" href="style.css?v=20240506">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet"/>
+</head>
+
+<body>
+  <!-- Banner para celular -->
+<header class="banner banner-celular fade-in">
+  <img src="img/Cafe6.jpg" alt="Real Rentería" class="banner-imagen" />
+</header>
+
+<!-- Banner para PC con 3 imágenes -->
+<header class="banner banner-pc fade-in">
+  <div class="banner-multiple">
+    <img src="img/Logocafeatras.jpg" alt="1" />
+    <img src="img/Cafe6.jpg" alt="2" />
+    <img src="img/Cafetitulo3.jpg" alt="3" />
+  </div>
+</header>
+
+
+  <!-- Descripción -->
+  <section class="descripcion fade-in">
+    <div class="contenido-descripcion">
+      <p>Bienvenidos a Real Rentería, una cafetería con sabor tradicional y ambiente acogedor. ¡Conócenos!</p>
+    </div>
+  </section>
+
+<!-- Opciones -->
+<section class="opciones fade-in">
+  <a href="Loungue.html" class="opcion" style="background-image: url('img/Louge.jpg'); text-decoration: none;">
+    <span class="etiqueta-opcion">Louge</span>
+  </a>
+  <a href="Expendio.html" class="opcion" style="background-image: url('img/Expendio.JPG'); text-decoration: none;">
+    <span class="etiqueta-opcion">Expendio</span>
+  </a>
+  <a href="Bistro.html" class="opcion" style="background-image: url('img/Bistro.jpg'); text-decoration: none;">
+    <span class="etiqueta-opcion">Bistro</span>
+  </a>
+  <a href="Bar.html" class="opcion" style="background-image: url('img/Bar.jpg'); text-decoration: none;">
+    <span class="etiqueta-opcion">Bar</span>
+  </a>
+</section>
+
+
+
+
+
+<!--Galeria -->
+<section class="experiencia fade-in" style="display: flex; justify-content: center; align-items: center; height: 50px; ;">
+  <p style="font-family: 'Playfair Display', serif; font-weight: 600; 
+  font-size: 2.5rem; font-style: italic; text-align: center; color: #ffffff;">Experiencia</p>
+</section>
+
+
+
+
+
+<section class="galeria fade-in">
+  <div class="imagen-contenedor">
+    <button class="anterior" onclick="cambiarImagen(-1)">&#8249;</button>
+    <img id="imagen-carrusel" src="img/Experiencia1.jpg" alt="Imagen destacada">
+    <button class="siguiente" onclick="cambiarImagen(1)">&#8250;</button>
+  </div>
+  <div class="texto-fondo">
+    <p id="texto-imagen">Ofrecemos un lugar tranquilo con jazz de fondo para tener una platica amena mientras si disfurta un Cafe</p>
+  </div>
+</section>
+
+
+<section class="nuestra-finca-con-gif fade-in" style="padding: 40px 20px; text-align: center;">
+  <h2 style="font-family: 'Playfair Display', serif; font-size: 30px;
+   margin-bottom: 30px; color: #ffffff;">Origen de Nuestro Café</h2>
+
+  <div class="contenido-con-gif">
+    <!-- MP4 izquierda -->
+    <div class="gif-lateral gif-izquierda">
+      <video autoplay loop muted playsinline>
+        <source src="video/Tostandolite.mp4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+      </video>
+    </div>
+    
+
+    <!-- Contenido principal -->
+    <div class="bloque-finca">
+      <div style="width: 300px; background-color: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); overflow: hidden;">
+        <img src="img/Finca1.jpg" alt="Café de Chiapas" style="width: 100%; height: auto;">
+        <div style="padding: 20px;">
+          <h3 style="margin: 0;">Finca</h3>
+          <p style="font-size: 14px;">Conoce Nuestra Finca y su historia ubicada en Veracruz</p>
+          <a href="NuestraFinca.html" style="display: inline-block; margin-top: 10px; text-decoration: none; background: #000; color: #fff; padding: 10px 20px; border-radius: 5px;">Ver historia</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MP4 derecho -->
+
+    <div class="gif-lateral gif-derecha">
+      <video autoplay loop muted playsinline>
+        <source src="video/Tostandolite2.mp4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+      </video>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+  <!-- Galería de imágenes largas tipo D’Amico (comentado) -->
+  <!--
+  <section class="galeria-damico fade-in">
+    <h2>Nuestros espacios</h2>
+    <div class="imagenes-largas">
+      <img src="img/Cafe.jpg" alt="Espacio Real Rentería" />
+      <img src="img/Cafe.jpg" alt="Decoración y ambiente" />
+      <img src="img/Cafe.jpg" alt="Zona de café" />
+    </div>
+  </section>
+  -->
+
+  <!-- Mapa -->
+  <section class="mapa fade-in">
+    <h2 style="font-size: 35px;font-family: 'Ubuntu'; color: #ffffff;">Nos ubicamos en Regina 87</h2>
+
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d316.9441803372385!2d-99.13731466868067!3d19.42796934892738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fffdecc72ceb%3A0xd5c2e4864207028b!2zQ2Fmw6kgUmVhbCBSZW50ZXLDrWE!5e0!3m2!1ses!2smx!4v1746551147827!5m2!1ses!2smx"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </section>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/525531493593" class="whatsapp-float" target="_blank" rel="noopener">
+    <img src="img/LogoWhatsApp.png" alt="WhatsApp" />
+  </a>
+
+
+  <footer style="background-color: rgba(0, 0, 0, 0.8); padding: 3px; text-align: center;">
+    <p style="color: #ffffff; margin-bottom: 20px; font-family: 'Perpetua', serif; font-size: 24px;">
+      Síguenos en redes sociales
+    </p>
+    
+    <div style="display: flex; justify-content: center; gap: 15px;">
+      <a href="https://www.facebook.com/profile.php?id=61575277948264&sk=about" target="_blank">
+        <img src="img/facebook.png" alt="Facebook" style="width: 40px; height: 30px;">
+      </a>
+      <a href="https://www.instagram.com/cafe_renteria?igsh=c2d6dTZ2d3B3NTV5" target="_blank">
+        <img src="img/instagram.png" alt="Instagram" style="width: 40px; height: 30px;">
+      </a>
+      <a href="https://tiktok" target="_blank">
+        <img src="img/tiktok.png" alt="WhatsApp" style="width: 40px; height: 30px;">
+      </a>
+    </div>
+  </footer>
+  
+
+
+
+  <script src="carrusel.js"></script>
+
+</body>
+
+
+
+
+
+
+</html>
